@@ -10,12 +10,17 @@ import dagger.Component;
  * Created by jacky on 2017/8/15.
  * banker developer. <br/>
  * <br/>
+ * <p>
+ * public interface ThirdComponent{
+ * public interface ThirdComponent extends ThirdUserComponent {
+ * 这两个都可以
+ * </p>
  */
 
 @ActivityScope
 @Component(dependencies = ThirdUserComponent.class,
         modules = ThirdModule.class)
-public interface ThirdComponent extends ThirdUserComponent {
+public interface ThirdComponent {
 
     void inject(ThirdActivity thirdActivity);
 
