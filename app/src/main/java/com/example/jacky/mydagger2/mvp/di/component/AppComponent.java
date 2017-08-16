@@ -14,11 +14,11 @@
  *  limitations under the License.
  */
 
-package com.example.jacky.mydagger2.di.components;
+package com.example.jacky.mydagger2.mvp.di.component;
 
 
 import com.example.jacky.mydagger2.App;
-import com.example.jacky.mydagger2.di.modules.AppModule;
+import com.example.jacky.mydagger2.mvp.di.module.AppModule;
 
 import javax.inject.Singleton;
 
