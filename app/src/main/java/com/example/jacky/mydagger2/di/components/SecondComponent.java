@@ -2,7 +2,7 @@ package com.example.jacky.mydagger2.di.components;
 
 import com.example.jacky.mydagger2.di.modules.SecondModule;
 import com.example.jacky.mydagger2.di.scope.ActivityScope;
-import com.example.jacky.mydagger2.ui.SecondActivity;
+import com.example.jacky.mydagger2.ui.didemo.SecondActivity;
 
 import dagger.Component;
 

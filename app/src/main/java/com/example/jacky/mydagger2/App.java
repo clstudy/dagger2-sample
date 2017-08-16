@@ -18,7 +18,8 @@ package com.example.jacky.mydagger2;
 
 import android.app.Application;
 
-import com.example.jacky.mydagger2.di.components.AppComponent;
+import com.example.basement.BasementLibData;
+import com.example.jacky.mydagger2.mvp.di.component.AppComponent;
 
 import javax.inject.Inject;
 
@@ -30,27 +31,28 @@ import javax.inject.Inject;
 
 public class App extends Application {
 
-  private AppComponent appComponent;
+    private AppComponent appComponent;
 
-  @Inject static App app;
+    @Inject
+    static App app;
 
-  public static App get() {
-    return app;
-  }
+    public static App get() {
+        return app;
+    }
 
-  @Override
-  public void onCreate() {
-    super.onCreate();
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        BasementLibData.init(this, null);
+        buildComponent();
+    }
 
-    buildComponent();
-  }
+    private void buildComponent() {
+        appComponent = AppComponent.Initializer.init(this);
+        appComponent.inject(this);
+    }
 
-  private void buildComponent() {
-    appComponent = AppComponent.Initializer.init(this);
-    appComponent.inject(this);
-  }
-
-  public AppComponent component() {
-    return appComponent;
-  }
+    public AppComponent component() {
+        return appComponent;
+    }
 }

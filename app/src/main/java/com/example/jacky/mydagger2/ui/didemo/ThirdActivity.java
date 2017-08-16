@@ -1,7 +1,6 @@
-package com.example.jacky.mydagger2.ui;
+package com.example.jacky.mydagger2.ui.didemo;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.example.jacky.mydagger2.R;
@@ -9,6 +8,7 @@ import com.example.jacky.mydagger2.di.components.ThirdComponent;
 import com.example.jacky.mydagger2.di.components.ThirdUserComponent;
 import com.example.jacky.mydagger2.di.data.ThirdModel;
 import com.example.jacky.mydagger2.di.qualifier.ThirdQualifier;
+import com.example.jacky.mydagger2.framework.BaseActivity;
 
 import javax.inject.Inject;
 
@@ -18,7 +18,7 @@ import javax.inject.Inject;
  * <br/>
  */
 
-public class ThirdActivity extends AppCompatActivity {
+public class ThirdActivity extends BaseActivity {
 
     TextView mTextView;
 

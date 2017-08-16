@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package com.example.jacky.mydagger2.di.modules;
+package com.example.jacky.mydagger2.mvp.di.module;
 
 
 import com.example.jacky.mydagger2.App;

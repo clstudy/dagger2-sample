@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.jacky.mydagger2">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name=".App"
@@ -10,15 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.didemo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.SecondActivity"/>
-        <activity android:name=".ui.ThirdActivity"/>
+        <activity android:name=".ui.didemo.SecondActivity"/>
+        <activity android:name=".ui.didemo.ThirdActivity"/>
+        <activity android:name=".ui.mvpdemo.MvpActivity"/>
+        <activity android:name=".ui.mvpdemo.FoodActivity"/>
     </application>
 
 </manifest>
